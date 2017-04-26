@@ -76,7 +76,7 @@
                 <configuration>
                     <port>8082</port>
                     <path>/</path>
-                    <url>http://loaclhost:8080/manager/text</url>
+                    <url>http://loaclhost:8081/manager/text</url>
                     <username>tomcat</username>
                     <password>tomcat</password>
                 </configuration>

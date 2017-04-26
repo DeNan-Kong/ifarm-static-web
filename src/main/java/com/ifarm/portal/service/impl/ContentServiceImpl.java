@@ -29,11 +29,11 @@ public class ContentServiceImpl implements ContentService {
 	public String getContentList() {
 		//调用服务层的服务
 		String result = HttpClientUtil.doGet(REST_BASE_URL + REST_INDEX_AD_URL);
-		//把字符串转换成TaotaoResult
+		//把字符串转换成ifarmResult
 		try {
-			IfarmResult taotaoResult = IfarmResult.formatToList(result, TbContent.class);
+			IfarmResult ifarmResult = IfarmResult.formatToList(result, TbContent.class);
 			//取内容列表
-			List<TbContent> list = (List<TbContent>) taotaoResult.getData();
+			List<TbContent> list = (List<TbContent>) ifarmResult.getData();
 			List<Map> resultList = new ArrayList<>();
  			//创建一个jsp页码要求的pojo列表
 			for (TbContent tbContent : list) {
